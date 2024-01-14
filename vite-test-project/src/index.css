@@ -54,16 +54,6 @@ button {
   transition: border-color 0.25s;
 }
 
-.dark-button{
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #ededed;
-}
-
-.light-button{
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #1a1a1a;
-}
-
 button:hover {
   border-color: #646cff;
 }
@@ -83,4 +73,146 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* TODOList Component */
+
+.todo-content-container{
+  margin-top:50px;
+}
+
+.todo-input{
+  max-width: calc(75% - 50px);
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.todo-input > h2{
+  margin-bottom: 20px;
+}
+
+.todo-input-element{
+  max-width: calc(100% - 20px);
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+.todo-input-button{
+  max-width: 25%;
+  width:100%;
+  margin:auto;
+}
+
+.todolist-container{
+  height: 300px;
+  overflow-y: auto;
+}
+
+/* TODO Component */
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.todo{
+  display: flex;
+  border-radius: 20px;
+  max-width: calc(50% - 60px);
+  padding: 10px 25px 20px;
+  margin: 0 auto 20px;
+  flex-direction: column;
+}
+
+.todo-dark{
+  background-color: #ecebeb;
+  color:black;
+}
+
+.todo-light{
+  background-color: #1a1a1a;
+  color:white;
+}
+
+.todo > p {
+  color: gray;
+  font-size: .75rem;
+}
+
+.todo-top-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-top-container > p {
+  font-size: 2rem;
+}
+
+.interaction-bar{
+  display: flex;
+  width: 80px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.interaction-bar > button{
+  padding: 0;
+  margin:0;
+}
+
+.icon-dark{
+  color:black;
+}
+
+.icon-light{
+  color:white;
+}
+
+.delete{
+  background-color: transparent;
+}
+
+.edit{
+  background-color: transparent;
+}
+
+.is-done{
+  border-radius: 50%;
+  max-width: 15px;
+  min-width: 15px;
+  width: 100%;
+
+  max-height: 15px;
+  min-height: 15px;
+  height: 15px;
+
+  background-color: green;
+  transition: all .1s ease-in-out;
+}
+
+.is-not-done{
+  border-radius: 50%;
+  max-width: 15px;
+  min-width: 15px;
+
+  max-height: 15px;
+  min-height: 15px;
+
+  background-color: red;
+  transition: all .1s ease-in-out;
+}
+
+
+.todo-bottom-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

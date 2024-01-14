@@ -3,6 +3,10 @@ import './App.css'
 import Counter from './components/Counter';
 import CustomInput from './components/CustomInput';
 import Stepper from './components/Stepper';
+import Todo from './components/Todo';
+import TodoList from './components/TodoList';
+import { FaLightbulb } from "react-icons/fa";
+import { FaRegLightbulb } from "react-icons/fa";
 
 const stepperContent = [
   {
@@ -27,6 +31,27 @@ const stepperContent = [
   },
 ]
 
+const todo = [
+  {
+    id:'1234',
+    name:"My new todo task 1",
+    description:"This is the description of a todo task",
+    isDone: false
+  },
+  {
+    id:'4123',
+    name:"My new todo task 2",
+    description:"This is the description of a todo task",
+    isDone: true
+  },
+  {
+    id:'4123',
+    name:"My new todo task 3",
+    description:"This is the description of a todo task",
+    isDone: false
+  }
+]
+
 function App() {
   const [darkMode,setDarkMode] = useState(true);
 
@@ -34,14 +59,16 @@ function App() {
 
   return (
     <div className={darkMode ? "dark-mode" : "light-mode"}>
-      <button onClick={()=>setDarkMode(!darkMode)}>{darkMode ? "dark-mode" : "light-mode"}</button>
+      <button onClick={()=>setDarkMode(!darkMode)}>{darkMode ? <FaRegLightbulb />:<FaLightbulb />}</button>
       {/* <Counter initialValue={-5} darkMode={darkMode}/>
       <Counter initialValue={0} darkMode={darkMode}/>
       <Counter initialValue={5} darkMode={darkMode}/>
       <CustomInput type="text" name="Text"/> 
       <CustomInput type="number" name="Numeric"/> 
       <CustomInput type="date" name="Birth date"/>  */}
-      <Stepper content={content}/>
+      {/* <Stepper content={content}/> */}
+
+      <TodoList darkMode={darkMode}/>
     </div>
   )
 }
